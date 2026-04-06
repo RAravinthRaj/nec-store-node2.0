@@ -5,9 +5,9 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
-import { Notification } from '@/src/models';
-import { serializeNotification } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { Notification } from '../../models';
+import { serializeNotification } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
 
 interface MarkNotificationReadArgs {
   id: string;

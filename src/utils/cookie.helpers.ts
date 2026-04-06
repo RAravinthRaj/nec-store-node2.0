@@ -5,7 +5,7 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request, Response, CookieOptions } from 'express';
-import { config } from '@/src/config/config';
+import { config } from '../config/config';
 
 export const AUTH_COOKIE_NAME = 'nec_store_auth';
 export const SIGN_IN_COOKIE_NAME = 'nec_store_signin';

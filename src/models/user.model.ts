@@ -13,11 +13,11 @@ import {
   Model,
   NonAttribute,
 } from 'sequelize';
-import { isValidDepartment } from '@/src/utils/utils';
-import { Role, UserStatus, Department } from '@/src/config/enum.config';
-import { sequelize } from '@/src/database/sequelize';
-import UserRole from '@/src/models/userRole.model';
-import RecentProduct from '@/src/models/recentProduct.model';
+import { isValidDepartment } from '../utils/utils';
+import { Role, UserStatus, Department } from '../config/enum.config';
+import { sequelize } from '../database/sequelize';
+import UserRole from './userRole.model';
+import RecentProduct from './recentProduct.model';
 
 export default class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   declare id: CreationOptional<string>;

@@ -6,11 +6,11 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { NextFunction, Request, Response } from 'express';
 import validator from 'validator';
-import { CustomRequestHandler } from '@/types/express';
-import { Notification, User, UserRole } from '@/src/models';
-import { Department, Role } from '@/src/config/enum.config';
-import { findUsersByRole, serializeUser, userRoleInclude } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { CustomRequestHandler } from '../../types/express';
+import { Notification, User, UserRole } from '../models';
+import { Department, Role } from '../config/enum.config';
+import { findUsersByRole, serializeUser, userRoleInclude } from '../utils/db.helpers';
+import logger from '../utils/logger';
 
 export const createUser: CustomRequestHandler = async (
   req: Request,

@@ -5,14 +5,14 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
-import { Product } from '@/src/models';
+import { Product } from '../../models';
 import { Op } from 'sequelize';
 import {
   likeContains,
   productCategoryInclude,
   serializeProduct,
-} from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+} from '../../utils/db.helpers';
+import logger from '../../utils/logger';
 
 interface Context {
   req: any;

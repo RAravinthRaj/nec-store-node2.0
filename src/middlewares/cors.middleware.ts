@@ -5,7 +5,7 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
-import { config } from '@/src/config/config';
+import { config } from '../config/config';
 import cors from 'cors';
 export const corsMiddleware = cors({
   origin: (origin, callback) => {

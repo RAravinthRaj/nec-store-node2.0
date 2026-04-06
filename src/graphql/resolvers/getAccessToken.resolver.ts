@@ -5,12 +5,12 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request, Response } from 'express';
-import { User } from '@/src/models';
-import { JwtService } from '@/src/services/jwt.service';
-import { Role } from '@/src/config/enum.config';
-import { getUserRoles, userRoleInclude } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
-import { clearSignInCookie, setAuthCookie } from '@/src/utils/cookie.helpers';
+import { User } from '../../models';
+import { JwtService } from '../../services/jwt.service';
+import { Role } from '../../config/enum.config';
+import { getUserRoles, userRoleInclude } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
+import { clearSignInCookie, setAuthCookie } from '../../utils/cookie.helpers';
 
 interface Context {
   req: Request;

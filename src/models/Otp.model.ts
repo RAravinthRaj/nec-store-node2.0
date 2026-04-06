@@ -12,7 +12,7 @@ import {
   InferCreationAttributes,
   Model,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
+import { sequelize } from '../database/sequelize';
 
 export class OtpModel extends Model<InferAttributes<OtpModel>, InferCreationAttributes<OtpModel>> {
   declare id: CreationOptional<string>;

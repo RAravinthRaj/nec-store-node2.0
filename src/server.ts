@@ -4,7 +4,6 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.  
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import 'module-alias/register';
 import express from 'express';
 import bodyParser from 'body-parser';
 
@@ -20,13 +19,13 @@ import {
   httpsRedirect,
   rate_limiter,
   helmetMiddleware,
-} from '@/src/middlewares';
-import { resolvers, typeDefs } from '@/src/graphql/graphql.schema';
-import router from '@/src/routes/rest.route';
-import { config, validateConfig } from '@/src/config/config';
-import logger from '@/src/utils/logger';
-import { startReportWorker } from '@/src/workers/report.worker';
-import { syncDatabase } from '@/src/models';
+} from './middlewares';
+import { resolvers, typeDefs } from './graphql/graphql.schema';
+import router from './routes/rest.route';
+import { config, validateConfig } from './config/config';
+import logger from './utils/logger';
+import { startReportWorker } from './workers/report.worker';
+import { syncDatabase } from './models';
 
 const app = express();
 

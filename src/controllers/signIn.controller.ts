@@ -7,12 +7,12 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 
 import { Request, Response, NextFunction } from 'express';
 import validator from 'validator';
-import { User } from '@/src/models';
-import { MailService } from '@/src/services/mail.service';
-import { OtpStore } from '@/src/services/otpStore.service';
-import { CustomRequestHandler } from '@/types/express';
-import { UserStatus } from '@/src/config/enum.config';
-import logger from '@/src/utils/logger';
+import { User } from '../models';
+import { MailService } from '../services/mail.service';
+import { OtpStore } from '../services/otpStore.service';
+import { CustomRequestHandler } from '../../types/express';
+import { UserStatus } from '../config/enum.config';
+import logger from '../utils/logger';
 
 export const signIn: CustomRequestHandler = async (
   req: Request,

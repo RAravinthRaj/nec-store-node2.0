@@ -13,8 +13,8 @@ import {
   Model,
   NonAttribute,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
-import Category from '@/src/models/category.model';
+import { sequelize } from '../database/sequelize';
+import Category from './category.model';
 
 export default class Product extends Model<
   InferAttributes<Product>,

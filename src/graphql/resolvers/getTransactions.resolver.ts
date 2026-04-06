@@ -6,9 +6,9 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request } from 'express';
 import { Op } from 'sequelize';
-import { Role } from '@/src/config/enum.config';
-import { Order, PaymentTransaction, User } from '@/src/models';
-import logger from '@/src/utils/logger';
+import { Role } from '../../config/enum.config';
+import { Order, PaymentTransaction, User } from '../../models';
+import logger from '../../utils/logger';
 
 export interface GetTransactionsContext {
   req: Request;

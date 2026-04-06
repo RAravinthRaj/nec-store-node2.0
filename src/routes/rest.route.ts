@@ -5,12 +5,12 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Router } from 'express';
-import { signIn } from '@/src/controllers/signIn.controller';
-import { createUser } from '@/src/controllers/createUser.controller';
-import { verifyOtp } from '@/src/controllers/verifyOtp.controller';
-import { getSession } from '@/src/controllers/session.controller';
-import { logout } from '@/src/controllers/logout.controller';
-import { authenticateJWT } from '@/src/middlewares';
+import { signIn } from '../controllers/signIn.controller';
+import { createUser } from '../controllers/createUser.controller';
+import { verifyOtp } from '../controllers/verifyOtp.controller';
+import { getSession } from '../controllers/session.controller';
+import { logout } from '../controllers/logout.controller';
+import { authenticateJWT } from '../middlewares';
 
 const router = Router();
 

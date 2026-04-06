@@ -7,7 +7,7 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 
 import { Request } from 'express';
 import rateLimit from 'express-rate-limit';
-import { config } from '@/src/config/config';
+import { config } from '../config/config';
 
 export const rate_limiter = rateLimit({
   windowMs: config.rateLimitMinutes * 60 * 1000,

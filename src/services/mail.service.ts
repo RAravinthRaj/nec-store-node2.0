@@ -8,8 +8,8 @@ import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';
 import handlebars from 'handlebars';
-import logger from '@/src/utils/logger';
-import { config } from '@/src/config/config';
+import logger from '../utils/logger';
+import { config } from '../config/config';
 
 export interface SendOTPParams {
   email: string;

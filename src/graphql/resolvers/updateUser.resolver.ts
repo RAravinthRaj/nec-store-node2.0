@@ -5,13 +5,13 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request, Response } from 'express';
-import { User, UserRole } from '@/src/models';
-import { JwtService } from '@/src/services/jwt.service';
-import { Department, Role, UserStatus } from '@/src/config/enum.config';
-import logger from '@/src/utils/logger';
-import { ImageBucketService } from '@/src/services/imageBucket.service';
-import { getUserRoles, userRoleInclude } from '@/src/utils/db.helpers';
-import { setAuthCookie } from '@/src/utils/cookie.helpers';
+import { User, UserRole } from '../../models';
+import { JwtService } from '../../services/jwt.service';
+import { Department, Role, UserStatus } from '../../config/enum.config';
+import logger from '../../utils/logger';
+import { ImageBucketService } from '../../services/imageBucket.service';
+import { getUserRoles, userRoleInclude } from '../../utils/db.helpers';
+import { setAuthCookie } from '../../utils/cookie.helpers';
 
 interface Context {
   req: Request;

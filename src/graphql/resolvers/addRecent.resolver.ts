@@ -6,9 +6,9 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
 import { Request } from 'express';
-import { Product, RecentProduct, User } from '@/src/models';
-import { userRecentInclude, userRoleInclude, serializeUser } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { Product, RecentProduct, User } from '../../models';
+import { userRecentInclude, userRoleInclude, serializeUser } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
 
 interface Context {
   req: Request;

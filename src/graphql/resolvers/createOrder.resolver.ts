@@ -6,17 +6,17 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
 import { Request } from 'express';
-import { Notification, Order, OrderItem, Product, sequelize } from '@/src/models';
-import logger from '@/src/utils/logger';
-import { DeliveryStatus, OrderStatus, PaidStatus, Role } from '@/src/config/enum.config';
-import { IdService } from '@/src/services/orderId.service';
-import { config } from '@/src/config/config';
+import { Notification, Order, OrderItem, Product, sequelize } from '../../models';
+import logger from '../../utils/logger';
+import { DeliveryStatus, OrderStatus, PaidStatus, Role } from '../../config/enum.config';
+import { IdService } from '../../services/orderId.service';
+import { config } from '../../config/config';
 import {
   findUsersByRole,
   orderProductsInclude,
   productCategoryInclude,
   serializeOrder,
-} from '@/src/utils/db.helpers';
+} from '../../utils/db.helpers';
 import { Op, Transaction } from 'sequelize';
 
 interface Context {

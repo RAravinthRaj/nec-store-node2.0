@@ -4,10 +4,10 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.  
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import { Order } from '@/src/models';
-import { PaidStatus, DeliveryStatus, OrderStatus, Role } from '@/src/config/enum.config';
-import { orderProductsInclude, serializeOrder } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { Order } from '../../models';
+import { PaidStatus, DeliveryStatus, OrderStatus, Role } from '../../config/enum.config';
+import { orderProductsInclude, serializeOrder } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
 
 export const updateOrder = async (
   _: any,

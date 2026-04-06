@@ -5,8 +5,8 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request } from 'express';
-import { RecentProduct, User } from '@/src/models';
-import logger from '@/src/utils/logger';
+import { RecentProduct, User } from '../../models';
+import logger from '../../utils/logger';
 
 interface Context {
   req: Request;

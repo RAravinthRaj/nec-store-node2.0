@@ -8,12 +8,12 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 import { Request } from 'express';
 import crypto from 'crypto';
 import Razorpay from 'razorpay';
-import logger from '@/src/utils/logger';
-import { config } from '@/src/config/config';
-import { Order, PaymentTransaction, Product, sequelize } from '@/src/models';
-import { PaidStatus, PaymentTransactionStatus } from '@/src/config/enum.config';
-import { finalizeOrderCreation, OrderProductInput } from '@/src/graphql/resolvers/createOrder.resolver';
-import { orderProductsInclude, serializeOrder } from '@/src/utils/db.helpers';
+import logger from '../../utils/logger';
+import { config } from '../../config/config';
+import { Order, PaymentTransaction, Product, sequelize } from '../../models';
+import { PaidStatus, PaymentTransactionStatus } from '../../config/enum.config';
+import { finalizeOrderCreation, OrderProductInput } from './createOrder.resolver';
+import { orderProductsInclude, serializeOrder } from '../../utils/db.helpers';
 import { Transaction, UniqueConstraintError } from 'sequelize';
 
 interface Context {

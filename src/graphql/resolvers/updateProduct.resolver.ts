@@ -5,11 +5,11 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request } from 'express';
-import { Category, Product } from '@/src/models';
-import { Role } from '@/src/config/enum.config';
-import { productCategoryInclude } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
-import { ImageBucketService } from '@/src/services/imageBucket.service';
+import { Category, Product } from '../../models';
+import { Role } from '../../config/enum.config';
+import { productCategoryInclude } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
+import { ImageBucketService } from '../../services/imageBucket.service';
 
 interface Context {
   req: Request;

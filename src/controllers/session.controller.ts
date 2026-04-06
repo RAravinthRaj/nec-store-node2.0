@@ -5,10 +5,10 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request, Response, NextFunction } from 'express';
-import { User } from '@/src/models';
-import { CustomRequestHandler } from '@/types/express';
-import { serializeUser, userRoleInclude } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { User } from '../models';
+import { CustomRequestHandler } from '../../types/express';
+import { serializeUser, userRoleInclude } from '../utils/db.helpers';
+import logger from '../utils/logger';
 
 export const getSession: CustomRequestHandler = async (
   req: Request,

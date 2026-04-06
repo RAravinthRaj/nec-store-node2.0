@@ -5,10 +5,10 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Queue } from 'bullmq';
-import { Role } from '@/src/config/enum.config';
-import { getTransactions, GetTransactionsContext } from '@/src/graphql/resolvers/getTransactions.resolver';
-import logger from '@/src/utils/logger';
-import { redisConnection } from '@/src/workers/report.worker';
+import { Role } from '../../config/enum.config';
+import { getTransactions, GetTransactionsContext } from './getTransactions.resolver';
+import logger from '../../utils/logger';
+import { redisConnection } from '../../workers/report.worker';
 
 interface GetTransactionsReportArgs {
   input: {

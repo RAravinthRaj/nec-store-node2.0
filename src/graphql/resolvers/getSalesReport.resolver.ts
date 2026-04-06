@@ -5,10 +5,10 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Queue } from 'bullmq';
-import { redisConnection } from '@/src/workers/report.worker';
-import { Role } from '@/src/config/enum.config';
-import logger from '@/src/utils/logger';
-import { getSales, GetSalesContext } from '@/src/graphql/resolvers/getSales.resolver';
+import { redisConnection } from '../../workers/report.worker';
+import { Role } from '../../config/enum.config';
+import logger from '../../utils/logger';
+import { getSales, GetSalesContext } from './getSales.resolver';
 interface GetSalesReportArgs {
   input: {
     from: string;

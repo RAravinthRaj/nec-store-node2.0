@@ -10,7 +10,7 @@ import {
   InferCreationAttributes,
   Model,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
+import { sequelize } from '../database/sequelize';
 
 export default class Counter extends Model<
   InferAttributes<Counter>,

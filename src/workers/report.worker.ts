@@ -6,13 +6,13 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { ConnectionOptions } from 'bullmq';
 import { Worker } from 'bullmq';
-import { MailService } from '@/src/services/mail.service';
+import { MailService } from '../services/mail.service';
 import ExcelJS from 'exceljs';
 import os from 'os';
 import path from 'path';
 import fs from 'fs/promises';
-import { config } from '@/src/config/config';
-import logger from '@/src/utils/logger';
+import { config } from '../config/config';
+import logger from '../utils/logger';
 
 export const redisConnection: ConnectionOptions = {
   host: config.redisHost,

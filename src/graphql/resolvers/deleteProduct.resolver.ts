@@ -5,9 +5,9 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request } from 'express';
-import { Product } from '@/src/models';
-import { Role } from '@/src/config/enum.config';
-import logger from '@/src/utils/logger';
+import { Product } from '../../models';
+import { Role } from '../../config/enum.config';
+import logger from '../../utils/logger';
 
 interface Context {
   req: Request;

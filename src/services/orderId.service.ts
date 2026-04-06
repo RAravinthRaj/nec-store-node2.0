@@ -5,8 +5,8 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import logger from '../utils/logger';
-import Counter from '@/src/models/counter.model';
-import { sequelize } from '@/src/models';
+import Counter from '../models/counter.model';
+import { sequelize } from '../models';
 
 export class IdService {
   private static instance: IdService;

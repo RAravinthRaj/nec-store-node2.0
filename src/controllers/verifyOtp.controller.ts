@@ -7,13 +7,13 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 
 import { Request, Response, NextFunction } from 'express';
 import validator from 'validator';
-import { User } from '@/src/models';
-import { OtpStore } from '@/src/services/otpStore.service';
-import { CustomRequestHandler } from '@/types/express';
-import { JwtService } from '@/src/services/jwt.service';
-import logger from '@/src/utils/logger';
-import { clearSignInCookie, setAuthCookie, setSignInCookie } from '@/src/utils/cookie.helpers';
-import { getUserRoles, userRoleInclude } from '@/src/utils/db.helpers';
+import { User } from '../models';
+import { OtpStore } from '../services/otpStore.service';
+import { CustomRequestHandler } from '../../types/express';
+import { JwtService } from '../services/jwt.service';
+import logger from '../utils/logger';
+import { clearSignInCookie, setAuthCookie, setSignInCookie } from '../utils/cookie.helpers';
+import { getUserRoles, userRoleInclude } from '../utils/db.helpers';
 
 export const verifyOtp: CustomRequestHandler = async (
   req: Request,

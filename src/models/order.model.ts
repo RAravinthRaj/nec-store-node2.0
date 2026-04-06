@@ -14,10 +14,10 @@ import {
   Model,
   NonAttribute,
 } from 'sequelize';
-import { DeliveryStatus, OrderStatus, PaidStatus } from '@/src/config/enum.config';
-import { sequelize } from '@/src/database/sequelize';
-import User from '@/src/models/user.model';
-import OrderItem from '@/src/models/orderItem.model';
+import { DeliveryStatus, OrderStatus, PaidStatus } from '../config/enum.config';
+import { sequelize } from '../database/sequelize';
+import User from './user.model';
+import OrderItem from './orderItem.model';
 
 export default class Order extends Model<InferAttributes<Order>, InferCreationAttributes<Order>> {
   declare id: CreationOptional<string>;

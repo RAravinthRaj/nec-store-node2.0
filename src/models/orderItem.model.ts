@@ -12,9 +12,9 @@ import {
   Model,
   NonAttribute,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
-import Category from '@/src/models/category.model';
-import Product from '@/src/models/product.model';
+import { sequelize } from '../database/sequelize';
+import Category from './category.model';
+import Product from './product.model';
 
 export default class OrderItem extends Model<
   InferAttributes<OrderItem>,

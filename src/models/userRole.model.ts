@@ -11,8 +11,8 @@ import {
   InferCreationAttributes,
   Model,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
-import { Role } from '@/src/config/enum.config';
+import { sequelize } from '../database/sequelize';
+import { Role } from '../config/enum.config';
 
 export default class UserRole extends Model<
   InferAttributes<UserRole>,

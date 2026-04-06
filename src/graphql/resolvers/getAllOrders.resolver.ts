@@ -4,9 +4,9 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.  
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import { Order, User } from '@/src/models';
-import logger from '@/src/utils/logger';
-import { likeContains, orderProductsInclude, serializeOrder } from '@/src/utils/db.helpers';
+import { Order, User } from '../../models';
+import logger from '../../utils/logger';
+import { likeContains, orderProductsInclude, serializeOrder } from '../../utils/db.helpers';
 import { Op } from 'sequelize';
 
 interface Context {

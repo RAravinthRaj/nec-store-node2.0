@@ -4,9 +4,9 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.  
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import { Category, Order, OrderItem, Product } from '@/src/models';
-import logger from '@/src/utils/logger';
-import { Role } from '@/src/config/enum.config';
+import { Category, Order, OrderItem, Product } from '../../models';
+import logger from '../../utils/logger';
+import { Role } from '../../config/enum.config';
 import { Op } from 'sequelize';
 
 export interface GetSalesContext {

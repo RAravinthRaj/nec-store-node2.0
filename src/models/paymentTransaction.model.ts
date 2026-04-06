@@ -14,10 +14,10 @@ import {
   Model,
   NonAttribute,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
-import User from '@/src/models/user.model';
-import Order from '@/src/models/order.model';
-import { PaymentTransactionStatus } from '@/src/config/enum.config';
+import { sequelize } from '../database/sequelize';
+import User from './user.model';
+import Order from './order.model';
+import { PaymentTransactionStatus } from '../config/enum.config';
 
 export default class PaymentTransaction extends Model<
   InferAttributes<PaymentTransaction>,

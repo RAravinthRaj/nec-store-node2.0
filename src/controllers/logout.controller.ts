@@ -5,9 +5,9 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request, Response, NextFunction } from 'express';
-import { CustomRequestHandler } from '@/types/express';
-import { clearAuthCookies } from '@/src/utils/cookie.helpers';
-import logger from '@/src/utils/logger';
+import { CustomRequestHandler } from '../../types/express';
+import { clearAuthCookies } from '../utils/cookie.helpers';
+import logger from '../utils/logger';
 
 export const logout: CustomRequestHandler = async (
   req: Request,

@@ -37,7 +37,7 @@ import {
   getAllRecentProductsTypeDef,
   getNotificationTypeDef,
   addStockTypeDef,
-} from '@/src/graphql/typeDefs';
+} from './typeDefs';
 
 import {
   getRoles,
@@ -71,7 +71,7 @@ import {
   getNotifications,
   markNotificationRead,
   addStock,
-} from '@/src/graphql/resolvers';
+} from './resolvers';
 
 export const typeDefs = mergeTypeDefs([
   enumTypeDef,

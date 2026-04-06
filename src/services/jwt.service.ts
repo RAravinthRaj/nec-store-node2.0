@@ -6,7 +6,7 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
 import jwt from 'jsonwebtoken';
-import { config } from '@/src/config/config';
+import { config } from '../config/config';
 
 export class JwtService {
   private static instance: JwtService;

@@ -5,7 +5,7 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Includeable, Op } from 'sequelize';
-import { Department, Role, UserStatus } from '@/src/config/enum.config';
+import { Department, Role, UserStatus } from '../config/enum.config';
 import {
   Category,
   Order,
@@ -14,7 +14,7 @@ import {
   RecentProduct,
   User,
   UserRole,
-} from '@/src/models';
+} from '../models';
 
 export const userRoleInclude: Includeable = {
   model: UserRole,

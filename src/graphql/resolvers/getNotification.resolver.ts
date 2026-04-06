@@ -6,9 +6,9 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
 import { Request } from 'express';
-import { Notification } from '@/src/models';
-import { serializeNotification } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { Notification } from '../../models';
+import { serializeNotification } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
 
 interface Context {
   req: Request;

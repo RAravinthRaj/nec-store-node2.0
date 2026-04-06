@@ -6,8 +6,8 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { config } from '@/src/config/config';
-import { AUTH_COOKIE_NAME, SIGN_IN_COOKIE_NAME, getCookieValue } from '@/src/utils/cookie.helpers';
+import { config } from '../config/config';
+import { AUTH_COOKIE_NAME, SIGN_IN_COOKIE_NAME, getCookieValue } from '../utils/cookie.helpers';
 
 export const authenticateJWT = (req: Request, res: Response, next: NextFunction): void => {
   const authHeader = req.headers.authorization;

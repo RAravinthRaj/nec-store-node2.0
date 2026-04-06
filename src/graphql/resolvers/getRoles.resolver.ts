@@ -5,9 +5,9 @@ Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 import { Request } from 'express';
-import { User } from '@/src/models';
-import { getUserRoles, userRoleInclude } from '@/src/utils/db.helpers';
-import logger from '@/src/utils/logger';
+import { User } from '../../models';
+import { getUserRoles, userRoleInclude } from '../../utils/db.helpers';
+import logger from '../../utils/logger';
 
 interface Context {
   req: Request;

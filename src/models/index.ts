@@ -4,21 +4,21 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import { sequelize } from '@/src/database/sequelize';
-import User from '@/src/models/user.model';
-import UserRole from '@/src/models/userRole.model';
-import Category from '@/src/models/category.model';
-import Product from '@/src/models/product.model';
-import Order from '@/src/models/order.model';
-import OrderItem from '@/src/models/orderItem.model';
-import Notification from '@/src/models/notifications.model';
-import RecentProduct from '@/src/models/recentProduct.model';
-import Counter from '@/src/models/counter.model';
-import { OtpModel } from '@/src/models/Otp.model';
-import PaymentTransaction from '@/src/models/paymentTransaction.model';
-import AddStock from '@/src/models/addStock.model';
-import { config } from '@/src/config/config';
-import logger from '@/src/utils/logger';
+import { sequelize } from '../database/sequelize';
+import User from './user.model';
+import UserRole from './userRole.model';
+import Category from './category.model';
+import Product from './product.model';
+import Order from './order.model';
+import OrderItem from './orderItem.model';
+import Notification from './notifications.model';
+import RecentProduct from './recentProduct.model';
+import Counter from './counter.model';
+import { OtpModel } from './Otp.model';
+import PaymentTransaction from './paymentTransaction.model';
+import AddStock from './addStock.model';
+import { config } from '../config/config';
+import logger from '../utils/logger';
 
 User.hasMany(UserRole, { foreignKey: 'userId', as: 'userRoles', onDelete: 'CASCADE' });
 UserRole.belongsTo(User, { foreignKey: 'userId', as: 'user' });

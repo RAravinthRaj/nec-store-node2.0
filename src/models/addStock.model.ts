@@ -13,9 +13,9 @@ import {
   Model,
   NonAttribute,
 } from 'sequelize';
-import { sequelize } from '@/src/database/sequelize';
-import Product from '@/src/models/product.model';
-import User from '@/src/models/user.model';
+import { sequelize } from '../database/sequelize';
+import Product from './product.model';
+import User from './user.model';
 
 export default class AddStock extends Model<
   InferAttributes<AddStock>,

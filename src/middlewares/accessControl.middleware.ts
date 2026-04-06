@@ -6,7 +6,7 @@ Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
 
 import { Request, Response, NextFunction } from 'express';
-import { User } from '@/src/models';
+import { User } from '../models';
 import { UserStatus } from '../config/enum.config';
 
 interface AuthenticatedRequest extends Request {
