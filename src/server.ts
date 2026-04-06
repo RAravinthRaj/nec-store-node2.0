@@ -4,7 +4,7 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.  
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import express from 'express';
+import express, { Express } from 'express';
 import bodyParser from 'body-parser';
 
 import { ApolloServer } from '@apollo/server';
@@ -27,27 +27,29 @@ import logger from './utils/logger';
 import { startReportWorker } from './workers/report.worker';
 import { syncDatabase } from './models';
 
-const app = express();
+const createBaseApp = (): Express => {
+  const app = express();
 
-app.disable('x-powered-by');
-app.set('trust proxy', 1);
+  app.disable('x-powered-by');
+  app.set('trust proxy', 1);
 
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+  app.use(corsMiddleware);
+  app.use(rate_limiter);
+  app.use(bodySizeLimit);
+  app.use(httpsRedirect);
+  app.use(helmetMiddleware);
 
-app.use(corsMiddleware);
-
-app.use(rate_limiter);
-app.use(bodySizeLimit);
-app.use(httpsRedirect);
-
-app.use(helmetMiddleware);
+  return app;
+};
 
 async function startRestServer() {
-  app.use('/rest', router);
+  const restApp = createBaseApp();
+  restApp.use('/rest', router);
 
-  app.listen(config.restPort, () => {
-    logger.info(`🚀 REST Server running at http://localhost:${config.restPort}/rest`);
+  restApp.listen(config.restPort, () => {
+    logger.info(`REST server listening on port ${config.restPort}`);
   });
 }
 
@@ -74,9 +76,10 @@ async function startGraphqlServer() {
   });
 
   await graphqlServer.start();
-  app.use(bodyParser.json());
+  const graphqlApp = createBaseApp();
+  graphqlApp.use(bodyParser.json());
 
-  app.use(
+  graphqlApp.use(
     '/graphql',
     authenticateJWT,
     accessControl,
@@ -85,8 +88,8 @@ async function startGraphqlServer() {
     }),
   );
 
-  app.listen(config.graphqlPort, () => {
-    logger.info(`🚀 GRAPHQL Server running at http://localhost:${config.graphqlPort}/graphql`);
+  graphqlApp.listen(config.graphqlPort, () => {
+    logger.info(`GraphQL server listening on port ${config.graphqlPort}`);
   });
 }
 

@@ -12,7 +12,7 @@ import { OtpStore } from '../services/otpStore.service';
 import { CustomRequestHandler } from '../../types/express';
 import { JwtService } from '../services/jwt.service';
 import logger from '../utils/logger';
-import { clearSignInCookie, setAuthCookie, setSignInCookie } from '../utils/cookie.helpers';
+import { clearAuthCookies, clearSignInCookie, setAuthCookie, setSignInCookie } from '../utils/cookie.helpers';
 import { getUserRoles, userRoleInclude } from '../utils/db.helpers';
 
 export const verifyOtp: CustomRequestHandler = async (
@@ -71,6 +71,8 @@ export const verifyOtp: CustomRequestHandler = async (
       clearSignInCookie(res);
       setAuthCookie(res, authToken);
     } else {
+      clearAuthCookies(res);
+
       const signInToken = JwtService.getInstance().generateToken(
         {
           id: user.id,

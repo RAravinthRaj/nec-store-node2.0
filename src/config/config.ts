@@ -50,11 +50,20 @@ export interface Config {
   cookieSameSite: 'lax' | 'strict' | 'none';
 }
 
+const normalizeOrigin = (value: string) => {
+  try {
+    return new URL(value).origin;
+  } catch (_) {
+    return value.trim().replace(/\/+$/, '');
+  }
+};
+
 const parseFrontendURLs = (value?: string) => {
   const urls = (value || 'http://localhost:5174')
     .split(',')
     .map((url) => url.trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(normalizeOrigin);
 
   return urls.length > 0 ? urls : ['http://localhost:5174'];
 };
