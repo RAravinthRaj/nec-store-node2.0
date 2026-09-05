@@ -4,11 +4,10 @@ Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.  
 Written by Aravinth Raj R <aravinthr235@gmail.com>, 2025.
 */
-import express, { Express } from 'express';
-import bodyParser from 'body-parser';
+import express, { Express, Request, Response } from 'express';
 
 import { ApolloServer } from '@apollo/server';
-import { expressMiddleware } from '@apollo/server/express4';
+import { expressMiddleware } from '@as-integrations/express5';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
 import { ApolloServerPluginLandingPageDisabled } from '@apollo/server/plugin/disabled';
 import {
@@ -77,14 +76,16 @@ async function startGraphqlServer() {
 
   await graphqlServer.start();
   const graphqlApp = createBaseApp();
-  graphqlApp.use(bodyParser.json());
 
   graphqlApp.use(
     '/graphql',
     authenticateJWT,
     accessControl,
     expressMiddleware(graphqlServer, {
-      context: async ({ req, res }) => ({ req, res }),
+      context: async ({ req, res }: { req: Request; res: Response }) => ({
+        req,
+        res,
+      }),
     }),
   );
 
